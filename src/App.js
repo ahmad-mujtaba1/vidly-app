@@ -5,16 +5,17 @@ import Customers from "./components/customers";
 import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
 import Navbar from "./components/navBar";
-
-import "./App.css";
 import Navabar from "./components/navBar";
 import MoviesForm from "./components/moviesForm";
+import LoginForm from "./components/common/loginForm";
+import "./App.css";
 function App() {
   return (
     <React.Fragment>
       <Navbar />
       <main className="container">
         <Switch>
+          <Route path="/login" component={LoginForm}></Route>
           <Route path="/movies/:id" component={MoviesForm}></Route>
           <Route path="/movies" component={Movies}></Route>
           <Route path="/customers" component={Customers}></Route>
