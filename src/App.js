@@ -7,14 +7,17 @@ import NotFound from "./components/notFound";
 import Navbar from "./components/navBar";
 import Navabar from "./components/navBar";
 import MoviesForm from "./components/moviesForm";
+import Register from "./components/common/register";
 import LoginForm from "./components/common/loginForm";
 import "./App.css";
+
 function App() {
   return (
     <React.Fragment>
       <Navbar />
       <main className="container">
         <Switch>
+          <Route path="/register" component={Register}></Route>
           <Route path="/login" component={LoginForm}></Route>
           <Route path="/movies/:id" component={MoviesForm}></Route>
           <Route path="/movies" component={Movies}></Route>
